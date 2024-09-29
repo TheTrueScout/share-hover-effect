@@ -1,0 +1,81 @@
+html {
+  font-size: 16px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* ignore everything above this comment. */
+
+button {
+  width: 12rem;
+  height: 4rem;
+  background-color: #291faa;
+  border-radius: 100rem;
+  border: none;
+  position: absolute;
+  border: 3px solid #7067e9;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  overflow: hidden;
+}
+
+button svg {
+  width: 1.5rem;
+  transform: translateX(1.4rem);
+  scale: 0.8;
+  transition: 0.5s;
+}
+
+button::after {
+  content: 'Share';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  background-color: white;
+  border-radius: inherit;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #291faa;
+  font-size: 1.2rem;
+  font-weight: 600;
+  transition: 0.5s cubic-bezier(0.58, -0.55, 0.46, 1.29);
+}
+
+/* transitions */
+
+button:hover::after {
+  transform: translateX(-11rem);
+}
+
+button:hover svg {
+  scale: 1;
+  transform: translateX(0);
+}
